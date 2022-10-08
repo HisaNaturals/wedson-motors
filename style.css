@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500;600;700&family=Russo+One&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+:root {
+    --main-color: #3b71fe;
+    --link-color: #5191FA;
+    --link-color-title: #1A2B48;
+    --link-color-dark: #5191FA;
+    --grey-color: #5E6D77;
+    --light-grey-color: #EAEEF3;
+    --orange-color: #FA5636;
+}
+
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
+
+.section-m1{
+   margin: 1rem;
+}
+.section-m12{
+   margin: 1rem 2rem;
+}
+.section-m21{
+   margin: 2rem 1rem;
+}
+.section-m2{
+   margin: 2rem;
+}
+.section-p1{
+   padding: 1rem;
+}
+.section-p12{
+   padding: 1rem 2rem;
+}
+.section-p21{
+   padding: 2rem 1rem;
+}
+.section-p2{
+   padding: 2rem;
+}
+h1{
+   font-size: 5rem;
+}
+h2{
+   font-size: 3rem;
+   color: #fff;
+}
+h3{
+   font-size: 2rem;
+}
+h4{
+   font-size: 1.5rem;
+}
+h5{
+   font-size: 1rem;
+}
+h6{
+   font-size: 10px;
+}
+p{
+   font-size: 22px;
+   
+}
+.button-normal{
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-size: 18px;
+   margin:10px;
+   cursor: pointer;
+   font-weight: 500;
+
+}
+body{
+  min-width: 100vw;
+}
+
+
+ 
+/*--- Navigation -----*/
+
+
+.navigation{
+   display: flex;
+   justify-content: space-around;
+  
+   margin-top: 1rem;
+   position: fixed;
+   z-index: 999;
+   background: #fff;
+   margin: auto;
+   width: 100%;
+   height: 8vh;
+   
+}
+
+.navigation #bar{
+   display: none;
+}
+.navigation #close{
+   display: none;
+}
+
+
+.navigation .logo img{
+   width:10rem;
+   height: 8vh;
+}
+.navigation .navlinks{
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+    z-index: 999;
+   margin: 0;
+  padding-top: 20px;
+   
+}
+.navigation .navlinks li{
+   list-style: none;
+   position: relative;
+   
+   padding: 1rem;
+   padding-bottom: 2rem;
+   cursor: pointer;
+   transition: 1s;
+}
+.navigation .navlinks li:hover{
+   text-decoration: underline;
+}
+.navigation .navlinks li:hover .submenu{
+   display: block;
+   transition: 1s;
+   
+}
+.navigation .navlinks li a{
+   text-decoration: none;
+   color: #000;
+   font-size: 1rem;
+   font-weight: 500;
+   
+}
+.navigation .navlinks .submenu{
+   position: absolute;
+   background-color: #fff;
+   width: 250px;
+   margin-top: 2rem;
+   left: -1rem;
+   border-radius: 1rem;
+   display: none;
+   transition: 1s;
+}
+.navigation .navlinks .submenu li{
+   padding: 1rem;
+   padding-left: 0;
+   transition: 1s;
+}
+
+
+/*---- Hero ----*/
+
+.hero{
+   width: 100%;
+   min-height: 100vh;
+   position: relative;
+   background: linear-gradient(rgba(0,0,0,0.8),rgba(0,10,0,0.5)),
+    url(images/5\ \(2\).jpg);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   text-align: center;
+}
+.hero .text{
+   position: absolute;
+   top:50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   color: #fff;
+   text-align: center;
+   padding: 1rem;
+}
+.hero .text h2{
+   text-align: center;
+  font-family: 'Dancing Script', cursive;
+   font-weight: 800;
+   box-shadow: 1px 1px 10px hsl(120, 50%, 10%);
+   border-radius: 1rem;
+   padding: 1rem;
+   
+}
+.hero .text h2:hover{
+    box-shadow: 1px 1px 10px hsl(120, 90%, 50%);
+    padding: 1rem;
+    transition: 0.5s ease-in-out;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+ span{
+   color: orange;
+   font-size: 1.2rem;
+}
+#hero {
+    animation-name: vehicle;
+  
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;  
+    animation-duration: 2s;          
+     animation-timing-function: ease-in-out;
+}
+ @keyframes vehicle{
+         from{
+            left: -100%;
+         }
+         to{
+            left: 0%;
+         }
+      }
+     
+      #text {
+    animation-name: text;
+  
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;  
+    animation-duration: 4s;  
+    animation-delay: 0s;        
+     animation-timing-function: ease-in-out;
+}
+ @keyframes text{
+         from{
+            left: -50%;
+         }
+         to{
+            left: 50%;
+         }
+      }
+
+.button{
+   top:80%;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.button .btn{
+   border-radius: 10px;
+   transition: 0.5s;
+   margin: 10px;
+
+}
+.button .btn:hover{
+   transform: scale(1.1);
+}
+
+.bx{
+   width: 0;
+   height: 0;
+   font-size: 30px;
+   cursor: pointer;
+   position: fixed;
+   bottom: 50px;
+   left: 20px;
+}
+
+
+
+@media screen and (max-width: 990px){
+.navigation{
+    padding-left: 0rem;
+   padding-right: 0rem;
+}
+
+   .navigation #bar{
+   display: flex;
+   cursor: pointer;
+   
+   align-items: center;
+   
+   
+}
+   .navigation #close{
+      display: block;
+      cursor: pointer;
+      padding-top: 10px;
+   }
+    #navbar{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   position: absolute;
+   width: 300px;
+   left: -300px;
+   overflow-y: scroll;
+   background-color: #fff;
+   transition: 0.6s;
+   }
+    #navbar.active{
+      left: 0px;
+   }
+  
+   .navigation .navlinks .submenu{
+      margin-top: 0;
+      overflow-y: scroll;
+      top: 0;
+      left: 4.6rem;
+   }
+
+   .hero h2{
+      font-size: 2rem;
+     
+      padding: 0;
+      
+   }
+   .hero .text h2{
+      padding: 0;
+   }
+   .hero h4{
+      font-size: 1rem;
+      text-align: center;
+   }
+   .header .icons{
+   display: flex;
+   
+   
+   gap: 1em;
+   }
+   .header .contacts{
+      gap: 0;
+   }
+   .navigation{
+   
+   justify-content: space-around;
+  
+}
+
+}
+
+
+@media screen and (max-width: 590px){
+   .navigation .logo img{
+   width: 8rem;
+   height: 4em;
+ 
+   
+}
+}
+
+
+
+
+
+@media screen and (max-width: 350px){
+  .navigation{
+    padding-left: 0rem;
+   padding-right: 1rem;
+   justify-content: space-around;
+  }
+  .navigation .logo img{
+   width: 6rem;
+   height: 4em;
+   padding-left: 10px;
+}
+ .header .icons{
+   flex-direction: column;
+ }
+  .hero .text h2{
+      padding: 0;
+   }
+}
+
+/*---- About ----*/
+
+#wedson{
+   min-height: 60vh;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   
+}
+.wedson h3{
+   text-align: center;
+   border-bottom: 3px solid orangered;
+   
+}
+.wedson p{
+   text-align: justify;
+   font-size: 20px;
+   color: #000;
+   padding-top: 2rem;
+   line-height: 30px;
+   
+   
+}
+.wedson p span{
+   color: #000;
+   font-size: 16px;
+}
+
+/*---- Bike1----*/
+
+.bike1{
+   background: url(images/bike1.jpeg);
+   width: 100%;
+   min-height: 100vh;
+   background-position: center;
+   background-size: cover;
+   margin-bottom: 5rem;
+   position: relative;
+}
+.bike1 .desc{
+   position: absolute;
+   top:50%;
+   margin-left: 40px;
+}
+.bike1 .desc h2{
+   font-family: 'Dancing Script', cursive;
+   color: red;
+   font-weight:bolder;
+}
+.bike1 .desc h3{
+   color: #000;
+   font-weight:900;
+   font-size: 20px;
+   color: #fff;
+   font-family: 'Russo One', sans-serif;
+   line-height: 60px;
+  
+}
+
+/*--- Bike2 ---*/
+
+.bike2{
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+      
+   
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+ 
+   
+}
+.bike2 .image{
+   flex-basis: 50%;
+   
+}
+.bike2 .image img{
+   width: 100%;
+   height: 100%;
+  
+}
+.bike2 .words{
+   flex-basis: 50%;
+   position: relative;
+   background-color: hsl(120, 47%, 60%);
+   text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.bike2 .word{
+   position: absolute;
+   top:50%;
+   transform: translate(0,0);
+    font-family: 'Russo One', sans-serif;
+    margin-right: 2rem;
+   
+}
+.bike2 .word h3{
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+}
+.bike2 .word h4{
+    font-family: 'Russo One', sans-serif;
+}
+@media screen and (max-width:599px){
+   .bike2{
+   margin-top: 5rem;
+   margin-bottom: 13rem;
+      
+   
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   }
+}
+
+/*---- Slides ---*/
+
+.slides{
+   text-align: center;
+   text-transform: uppercase;
+}
+.slides h3{
+   border-bottom: 3px solid orangered;
+   
+   text-align: center;
+   margin-bottom: 10px;
+   text-overflow: clip;
+   text-size-adjust:inherit;
+}
+.carousel-item img{
+   height: auto;
+   border-radius: 20px;
+}
+
+/*-- Footer ---*/
+
+.footer{
+   background-color: #1A2B48;
+   color: #fff;
+   margin-top: 5rem;
+  
+   
+}
+ .icons{
+  margin-top: 2rem;
+  text-align: center;
+  padding: 2rem;
+ 
+}
+ .icons i{
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 30px;
+  margin: 5px;
+  
+}
+ .icons i:hover{
+color: #009688;
+transform: translateY(-5px);
+
+
+}
+.links{
+   display: flex;
+}
+.links h5{
+ text-align: left;
+}
+.links li{
+   text-align: left;
+}
+.links ul li{
+   list-style: none;
+}
+.links ul li a{
+   text-decoration: none;
+   color: #fff;
+
+}
+.links span{
+   text-align: justify;
+   color: #fff;
+}
+.links .company{
+   flex-basis: 40%;
+   margin-bottom: 20px;
+   margin-left: 20px;
+}
+.links .variants{
+   flex-basis: 20%;
+}
+.links .learn{
+   flex-basis: 20%;
+}
+.links .connect{
+   flex-basis: 20%;
+}
+.copyright{
+   text-align: center;
+}
+
+/*---- mybtn ----*/
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: none; /* Set a background color */
+ 
+  color: #000; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  
+}
+#myBtn img{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   transform: rotate(90deg);
+   transition: 0.2s ease-in-out;
+}
+#myBtn img:hover {
+
+box-shadow: 1px 1px 10px hsl(120, 90%, 10%);
+           
+}
+
+@media screen and (max-width:1000px){
+   .links{
+      flex-direction: column;
+   }
+}
+
+
+
+
+
+
+
+
+/* contact */
+
+.contact{
+   margin-top: 5rem;
+   margin-bottom: 8rem;
+  
+}
+.contact .section-title{
+   margin-bottom: 3rem;
+    text-align: center;
+}
+.contact .content h5 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+.contact .content p{
+   font-size: 16px;
+}
+.contact .content h5:first-child {
+  margin-top: 0;
+}
+.contact .content-right {
+  text-align: center;
+}
+.contact .button {
+ border-radius: 15px;
+ margin-top: 80px;
+}
+.contact img{
+   width: 50px;
+}
+/* form */
+form input {
+  border: 1px solid lightgray;
+  background: #f5f5f5;
+  padding: 14px 20px;
+  width: 100%;
+  color: #aaa;
+  border-radius: 5px;
+  text-align: left;
+  
+}
+form textarea {
+  border: 1px solid lightgray;
+  background: #f5f5f5;
+  padding: 14px 20px;
+  width: 100%;
+  color: #aaa;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: 20px;
+}
+ .dark-mode {
+        background-color: grey;
+        color: purple;
+      }
